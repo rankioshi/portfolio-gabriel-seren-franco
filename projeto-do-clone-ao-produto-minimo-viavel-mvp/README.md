@@ -32,7 +32,7 @@ O desenvolvimento deste projeto permitiu explorar a fronteira entre design gener
 
 ![Analytics View]
 <div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://imgur.com/a/gJQQgkA" />
+<img width="1200" height="475" alt="GHBanner" src="https://i.imgur.com/53QLHJM.png" />
 </div>
 
 ## 🔧 Como Executar

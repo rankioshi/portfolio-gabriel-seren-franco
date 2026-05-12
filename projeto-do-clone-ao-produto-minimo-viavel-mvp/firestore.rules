@@ -1,0 +1,89 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // ===============================================================
+    // Assumed Data Model
+    // ===============================================================
+    //
+    // Collection: users
+    // Document ID: {userId} (matches auth.uid)
+    // Fields:
+    //   - uid: string (required) - User ID
+    //   - email: string (required) - User email
+    //   - displayName: string (optional) - User display name
+    //   - photoURL: string (optional) - User photo URL
+    //   - createdAt: timestamp (optional) - Creation time
+    //
+    // Collection: qr_codes
+    // Document ID: {qrCodeId}
+    // Fields:
+    //   - id: string (optional) - Document ID
+    //   - userId: string (required) - Owner's UID
+    //   - name: string (optional) - Name of the QR code
+    //   - data: string (required) - Content of the QR code
+    //   - config: map (required) - Styling configuration
+    //   - createdAt: timestamp (optional) - Creation time
+    //   - updatedAt: timestamp (optional) - Last update time
+    //
+    // ===============================================================
+
+    // ===============================================================
+    // Helper Functions
+    // ===============================================================
+    
+    function isAuthenticated() {
+      return request.auth != null;
+    }
+
+    function isOwner(userId) {
+      return isAuthenticated() && request.auth.uid == userId;
+    }
+
+    function isDocOwner() {
+      return isAuthenticated() && request.auth.uid == resource.data.userId;
+    }
+
+    function isValidEmail(email) {
+      return email is string && email.matches("^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$");
+    }
+
+    function isValidUser(data) {
+      return data.keys().hasAll(['uid', 'email']) &&
+             data.uid == request.auth.uid &&
+             isValidEmail(data.email) &&
+             (data.displayName == null || (data.displayName is string && data.displayName.size() < 100)) &&
+             (data.photoURL == null || (data.photoURL is string && data.photoURL.size() < 500));
+    }
+
+    function isValidQRCode(data) {
+      return data.keys().hasAll(['userId', 'data', 'config']) &&
+             data.userId == request.auth.uid &&
+             data.data is string && data.data.size() < 2048 &&
+             data.config is map &&
+             (data.name == null || (data.name is string && data.name.size() < 100));
+    }
+
+    // ===============================================================
+    // Rules
+    // ===============================================================
+
+    match /users/{userId} {
+      allow read: if isOwner(userId);
+      allow create: if isOwner(userId) && isValidUser(request.resource.data);
+      allow update: if isOwner(userId) && isValidUser(request.resource.data);
+      allow delete: if false; // Users cannot delete their profiles via app
+    }
+
+    match /qr_codes/{qrCodeId} {
+      allow read: if isDocOwner();
+      allow create: if isAuthenticated() && isValidQRCode(request.resource.data);
+      allow update: if isDocOwner() && isValidQRCode(request.resource.data);
+      allow delete: if isDocOwner();
+    }
+
+    // Default deny
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}

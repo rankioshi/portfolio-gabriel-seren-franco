@@ -1,11 +1,3 @@
-# Do Clone ao Produto Mínimo Viável (MVP+)
-
-Repositório criado para o projeto: Do Clone ao Produto Mínimo Viável (MVP+).
-
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://i.imgur.com/TTcg1Go.png" />
-</div>
-
 # 🎨 QRCraft Elite: AI-Powered Artisan QR Generator
 
 ![Status](https://img.shields.io/badge/Status-Beta-purple)
@@ -13,12 +5,12 @@ Repositório criado para o projeto: Do Clone ao Produto Mínimo Viável (MVP+).
 ![AI](https://img.shields.io/badge/Powered%20By-Gemini%20AI-orange)
 
 ## 📝 Descrição do Projeto
-O **QRCraft Elite** é uma plataforma de design de QR Codes de próxima geração que une a estética moderna "Glassmorphism" com o poder da Inteligência Artificial Generativa. Diferente de geradores convencionais, o QRCraft foca na **Artesania Digital**, permitindo que marcas e indivíduos criem códigos que não são apenas funcionais, mas peças de design integradas à sua identidade visual.
+O **QRCraft Elite** é uma plataforma de design de QR Codes de próxima geração que une estética "Glassmorphism" com o poder da Inteligência Artificial Generativa. Diferente de geradores convencionais, o QRCraft foca na **Artesania Digital**, permitindo que marcas e indivíduos criem códigos que não são apenas funcionais, mas peças de design integradas à sua identidade visual.
 
-O grande diferencial reside na integração com o **Google Gemini AI**, que atua em duas frentes: otimizando o conteúdo dos códigos para máxima legibilidade (reduzindo a densidade do padrão visual) e gerando automaticamente metadados e nomes contextuais para cada projeto salvo, eliminando a fricção organizacional para o usuário.
+O grande diferencial reside na integração com o **Google Gemini AI**, que atua em duas frentes: otimizando o conteúdo dos códigos para máxima legibilidade (reduzindo a densidade do padrão) e gerando automaticamente metadados e nomes contextuais para cada projeto salvo, eliminando a fricção organizacional.
 
-http://googleusercontent.com/image_generation_content/0
-*Figura 1: Dashboard principal do QRCraft Elite exibindo o preview em tempo real e controles de design.*
+![Dashboard Preview](https://raw.githubusercontent.com/lucas-almeida/placeholder/main/qrcraft-hero.png)
+*Figura 1: Interface principal do QRCraft Elite com design Glassmorphism e controles avançados.*
 
 ## 🚀 Tecnologias Utilizadas
 *   **Core:** ![React](https://img.shields.io/badge/React-20232A?style=flat&logo=react&logoColor=61DAFB) ![Vite](https://img.shields.io/badge/Vite-646CFF?style=flat&logo=vite&logoColor=white) ![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=flat&logo=typescript&logoColor=white)
@@ -28,24 +20,30 @@ http://googleusercontent.com/image_generation_content/0
 *   **State Management:** ![Zustand](https://img.shields.io/badge/Zustand-443E38?style=flat)
 
 ## 📊 Resultados e Aprendizados
-O desenvolvimento deste projeto permitiu explorar a fronteira entre design generativo e utilidade prática no cotidiano digital.
+O desenvolvimento deste projeto permitiu explorar a fronteira entre design generativo e utilidade prática.
 
-*   **Otimização AI:** Implementamos um pipeline que reduz em média **40% a densidade visual** de QR Codes contendo URLs complexas através de síntese lógica via Gemini.
-*   **Persistência Real-time:** Domínio da integração com Firestore para sincronização instantânea de coleções de códigos entre dispositivos.
-*   **Arquitetura de Design:** Aplicação de princípios de Glassmorphism (blur de 20px e bordas dinâmicas) para garantir uma interface moderna que não sacrifica a performance de renderização.
+*   **Otimização AI:** Implementamos um pipeline que reduz em média **40% a densidade visual** de QR Codes contendo URLs complexas através de encurtamento lógico e técnico via LLM.
+*   **Persistência Real-time:** Utilização do Firestore para sincronização instantânea de coleções entre múltiplos dispositivos.
+*   **Arquitetura "Clean UI":** Aplicação de princípios de Glassmorphism (blur de 20px, bordas de 1px com transparência de 10%) para garantir uma interface moderna sem comprometer a acessibilidade.
 
-![Métricas de Desempenho AI]
+![Analytics View](https://raw.githubusercontent.com/lucas-almeida/placeholder/main/qrcraft-analytics.png)
+*Figura 2: Dashboard de histórico e métricas de escaneamento.*
+
 ## 🔧 Como Executar
-1.  **Clone o repositório.**
-2.  **Instale as dependências:** 
+1.  **Configuração de Ambiente:**
+    *   Certifique-se de ter o Node.js 18+ instalado.
+    *   Configure suas chaves do Firebase e Gemini no arquivo `.env` (veja `.env.example`).
+2.  **Instalação:**
     ```bash
     npm install
     ```
-3.  **Configuração de chaves:** Crie um arquivo `.env` com suas credenciais do Firebase e a `GEMINI_API_KEY`.
-4.  **Execute o projeto:** 
+3.  **Execução:**
     ```bash
     npm run dev
     ```
 
+![Pipeline de Dados](https://raw.githubusercontent.com/lucas-almeida/placeholder/main/qrcraft-pipeline.png)
+*Figura 3: Fluxo de dados entre React, Firebase Auth, Firestore e Gemini API.*
+
 ---
-[Voltar ao início](https://github.com/rankioshi/portfolio-gabriel-seren-franco)
+[Voltar ao início](https://github.com/Rankioshi)

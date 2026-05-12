@@ -30,7 +30,7 @@ O desenvolvimento deste projeto permitiu explorar a fronteira entre design gener
 *   **Persistência Real-time:** Utilização do Firestore para sincronização instantânea de coleções entre múltiplos dispositivos.
 *   **Arquitetura "Clean UI":** Aplicação de princípios de Glassmorphism (blur de 20px, bordas de 1px com transparência de 10%) para garantir uma interface moderna sem comprometer a acessibilidade.
 
-![Analytics View]
+![Features]
 <div align="center">
 <img width="1200" height="475" alt="GHBanner" src="https://i.imgur.com/53QLHJM.png" />
 </div>
@@ -47,9 +47,6 @@ O desenvolvimento deste projeto permitiu explorar a fronteira entre design gener
     ```bash
     npm run dev
     ```
-
-![Pipeline de Dados](https://raw.githubusercontent.com/lucas-almeida/placeholder/main/qrcraft-pipeline.png)
-*Figura 3: Fluxo de dados entre React, Firebase Auth, Firestore e Gemini API.*
 
 ---
 [Voltar ao início](https://github.com/Rankioshi)

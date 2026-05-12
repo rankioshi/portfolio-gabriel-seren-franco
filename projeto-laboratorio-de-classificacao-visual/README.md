@@ -1,4 +1,4 @@
-# 😶‍🌫️ SentimentAI: Reconhecimento de Emoções por Visão Computacional
+# 🌿 Sentia: Reconhecimento de Emoções por Visão Computacional
 
 ![TensorFlow.js](https://img.shields.io/badge/TensorFlow.js-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white)
 ![Teachable Machine](https://img.shields.io/badge/Teachable_Machine-4285F4?style=for-the-badge&logo=google&logoColor=white)
@@ -16,7 +16,7 @@
 
 ## 📝 Descrição do Projeto
 
-O **SentimentAI** é um modelo de classificação de imagens treinado para o reconhecimento automático de **expressões faciais e emoções humanas** em tempo real. Desenvolvido com o framework **Google Teachable Machine** e exportado no formato **TensorFlow.js**, o modelo é capaz de identificar cinco estados emocionais distintos diretamente no navegador — sem necessidade de infraestrutura de backend ou processamento em nuvem.
+O **Sentia** é um modelo de classificação de imagens treinado para o reconhecimento automático de **expressões faciais e emoções humanas** em tempo real. Desenvolvido com o framework **Google Teachable Machine** e exportado no formato **TensorFlow.js**, o modelo é capaz de identificar cinco estados emocionais distintos diretamente no navegador — sem necessidade de infraestrutura de backend ou processamento em nuvem.
 
 A arquitetura combina a robustez de redes neurais convolucionais com a leveza do TensorFlow.js, permitindo inferência de baixa latência em dispositivos com recursos limitados. O pipeline completo, desde a captura de imagem até a predição classificada, opera inteiramente no lado do cliente, garantindo **privacidade de dados** e **responsividade**.
 
@@ -48,12 +48,11 @@ O modelo foi treinado para reconhecer as seguintes expressões/emoções:
 
 ## 📁 Estrutura de Arquivos do Modelo
 
-```
-sentimentai-model/
+sentia-model/
 ├── model.json        # Grafo computacional e configuração da arquitetura
 ├── weights.bin       # Pesos sinápticos treinados (binário otimizado)
 └── metadata.json     # Metadados do projeto: classes, versões e timestamp
-```
+
 
 ### Detalhes dos Artefatos
 
@@ -77,7 +76,7 @@ sentimentai-model/
 ### Carregamento e Inferência
 
 ```javascript
-const URL = "./sentimentai-model/";
+const URL = "./sentia-model/";
 
 async function init() {
   const modelURL  = URL + "model.json";
@@ -115,7 +114,7 @@ const predictions = await model.predict(webcamElement);
 
 | Parâmetro | Valor |
 |---|---|
-| Nome do Modelo | Sentimentos |
+| Nome do Modelo | Sentia |
 | Número de Classes | 5 |
 | Resolução de Entrada | 224 × 224 px |
 | Framework Base | TensorFlow.js |
@@ -149,4 +148,4 @@ Distribuído sob a licença **MIT**. Consulte o arquivo `LICENSE` para mais info
 
 ---
 
-[⬆ Voltar ao início](https://github.com/profdiegocarvalho/portfolio-arthur-correia-carvalho)
+[⬆ Voltar ao início](https://github.com/rankioshi/portfolio-gabriel-seren-franco)

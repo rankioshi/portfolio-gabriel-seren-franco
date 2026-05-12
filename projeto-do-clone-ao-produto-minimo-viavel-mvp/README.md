@@ -48,4 +48,4 @@ O desenvolvimento deste projeto permitiu explorar a fronteira entre design gener
     ```
 
 ---
-[Voltar ao início](https://github.com/Rankioshi)
+[Voltar ao início](https://github.com/rankioshi/portfolio-gabriel-seren-franco)

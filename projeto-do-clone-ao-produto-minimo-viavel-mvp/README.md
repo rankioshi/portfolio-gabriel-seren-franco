@@ -13,7 +13,10 @@ O **QRCraft Elite** é uma plataforma de design de QR Codes de próxima geraçã
 
 O grande diferencial reside na integração com o **Google Gemini AI**, que atua em duas frentes: otimizando o conteúdo dos códigos para máxima legibilidade (reduzindo a densidade do padrão) e gerando automaticamente metadados e nomes contextuais para cada projeto salvo, eliminando a fricção organizacional.
 
-![Dashboard Preview](https://raw.githubusercontent.com/lucas-almeida/placeholder/main/qrcraft-hero.png)
+![Dashboard Preview]
+<div align="center">
+<img width="1200" height="475" alt="GHBanner" src="https://i.imgur.com/53QLHJM.png" />
+</div>
 *Figura 1: Interface principal do QRCraft Elite com design Glassmorphism e controles avançados.*
 
 ## 🚀 Tecnologias Utilizadas
@@ -30,11 +33,10 @@ O desenvolvimento deste projeto permitiu explorar a fronteira entre design gener
 *   **Persistência Real-time:** Utilização do Firestore para sincronização instantânea de coleções entre múltiplos dispositivos.
 *   **Arquitetura "Clean UI":** Aplicação de princípios de Glassmorphism (blur de 20px, bordas de 1px com transparência de 10%) para garantir uma interface moderna sem comprometer a acessibilidade.
 
-![Features]
+![Analytics]
 <div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://i.imgur.com/53QLHJM.png" />
+<img alt="analytics" src="https://desk.zoho.com/DocsDisplay?zgId=35998097&mode=inline&blockId=2bhlw7b5a358dc09f470aab682ae5c37a243a" />
 </div>
-
 ## 🔧 Como Executar
 1.  **Configuração de Ambiente:**
     *   Certifique-se de ter o Node.js 18+ instalado.
